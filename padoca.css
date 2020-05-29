@@ -1,0 +1,43 @@
+*{
+    padding: 0 auto;
+    margin:0 auto;
+}
+
+html,body{height: 100%;}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+.borda{
+    border:1px #ccc solid
+}
+.container{
+    width: 100%;
+    background-color: black;
+    height: 100%;
+}
+ul{
+    list-style: none;
+    background-color: brown;
+    height: 100%;
+    padding: 0;
+}
+
+ul li{
+    display: none;
+}
+
+#lista li img{
+  width:100%
+}
+
+ul li video {
+    position: fixed;
+    width: 100%;
+    height: auto;
+    align-self: center;
+   
+}
+
+.active{
+    display: block;
+}
+

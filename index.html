@@ -1,0 +1,78 @@
+<html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinta da Padaria</title>
+    <link href="padoca.css" type="text/css" rel="stylesheet">
+    <script
+       src="./jQuery/jquery-3.5.1.js">
+    </script>
+    <script>
+          setInterval(function () {
+            var lista = document.getElementById("lista")
+            var tamanhoLista = parseInt($(lista).children().length)
+            var i = 1
+
+            while(i <= tamanhoLista ){
+
+               if($(lista).children('#'+i).attr('class')=="active"){
+                  
+                  if($(lista).children('#'+i).attr('id')==tamanhoLista){
+                     $(lista).children('#'+i).attr('class','')
+                     $(lista).children('#1').attr('class','active')
+                     return
+                  }else{
+                     $(lista).children('#'+i).attr('class','')
+                     console.log(i)
+                     $(lista).children('#'+(parseInt(i)+parseInt(1))).attr('class','active')
+                     return
+                  }
+        
+               }else{
+                  i++
+               }
+               
+               
+            }
+          }, 3000);
+   </script>
+
+</head>
+
+<body>
+   <div class='container'>
+      <ul id='lista'>
+         <li id=1 class="active">
+            <img src="media/1.png" alt="">
+         </li>
+         <li id=2>
+            <img src="media/2.png" alt="">
+         </li>
+         <li id=3 >
+            <img src="media/3.png" alt="">
+         </li>
+         <li id=4 >
+            <img src="media/4.png" alt="">
+         </li>
+         <li id=5 >
+            <video id='video-bg' autoplay loop muted poster='video_poster'>
+               <source src='media/5.mp4' type='video/mp4'>
+           </video>
+         </li>
+         <li id=6>
+            <video id='video-bg' autoplay loop muted poster='video_poster'>
+               <source src='media/6.mp4' type='video/mp4'>
+           </video>
+         </li>
+         <li id=7>
+            <img src="media/7.png" alt="">
+         </li>
+
+      </ul>
+   </div>
+   
+  
+    
+
+</body>
+
+</html>
